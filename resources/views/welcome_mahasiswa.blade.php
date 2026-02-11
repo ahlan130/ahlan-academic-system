@@ -358,20 +358,16 @@
             <div class="info-section">
                 <div class="info-grid">
                     <div class="info-item">
-                        <div class="info-number">1000+</div>
-                        <div class="info-label">Mahasiswa Aktif</div>
+                        <div class="info-number">{{ $jmlMahasiswa }}</div>
+                        <div class="info-label">Mahasiswa Terdaftar</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-number">50+</div>
-                        <div class="info-label">Dosen Profesional</div>
+                        <div class="info-number">{{ $jmlMataKuliah }}</div>
+                        <div class="info-label">Mata Kuliah Tersedia</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-number">10+</div>
-                        <div class="info-label">Program Studi</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-number">95%</div>
-                        <div class="info-label">Tingkat Kelulusan</div>
+                        <div class="info-number">100%</div>
+                        <div class="info-label">Sistem Terintegrasi</div>
                     </div>
                 </div>
             </div>
