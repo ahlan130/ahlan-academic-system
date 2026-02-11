@@ -13,6 +13,12 @@ class MataKuliahController extends Controller
         return view('matakuliah.index', compact('mataKuliahs'));
     }
 
+    public function show(MataKuliah $matakuliah)
+    {
+        $matakuliah->load('mahasiswas');
+        return view('matakuliah.show', compact('matakuliah'));
+    }
+
     public function create()
     {
         return view('matakuliah.create');

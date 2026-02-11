@@ -47,8 +47,12 @@
         }
         .btn-add { background: #f97316; color: white; }
         .btn-add:hover { background: #ea580c; transform: translateY(-2px); }
+        .btn-view { background: #3b82f6; color: white; font-size: 0.8rem; padding: 5px 12px; }
+        .btn-view:hover { background: #1d4ed8; }
         .btn-edit { background: #6b7280; color: white; font-size: 0.8rem; padding: 5px 12px; }
+        .btn-edit:hover { background: #4b5563; }
         .btn-delete { background: #ef4444; color: white; font-size: 0.8rem; padding: 5px 12px; }
+        .btn-delete:hover { background: #dc2626; }
         
         table {
             width: 100%;
@@ -114,6 +118,9 @@
                     <td>{{ $mk->nama_mk }}</td>
                     <td>{{ $mk->sks }}</td>
                     <td style="display: flex; gap: 8px;">
+                        <a href="{{ route('matakuliah.show', $mk->id) }}" class="btn btn-view" title="Lihat Mahasiswa">
+                           <i class="fas fa-users"></i>
+                        </a>
                         <a href="{{ route('matakuliah.edit', $mk->id) }}" class="btn btn-edit">Edit</a>
                         <form action="{{ route('matakuliah.destroy', $mk->id) }}" method="POST" onsubmit="return confirm('Yakin hapus?')">
                             @csrf @method('DELETE')
